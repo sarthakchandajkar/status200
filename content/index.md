@@ -1,5 +1,5 @@
 ---
-title: Welcome to Status200
+title: Welcome to Status 200
 ---
 # 🌱 **Welcome to Status 200: An Open-Source Tech Digital Garden**
 
