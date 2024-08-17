@@ -41,5 +41,5 @@ Interested in being a part of this growing community? You can contribute by:
 - Sharing personal experiences in your tech role.
 - Recommending valuable resources you’ve found helpful.
 
-For more details on how to get started, visit our [contribution guide](#).
+For more details on how to get started, visit our [[Contribution Guide]].
 
