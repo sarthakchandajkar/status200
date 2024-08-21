@@ -17,8 +17,7 @@ Before cloning, you need to fork the **Status 200** repository to your own GitHu
 
 Now, clone your forked repository to your local machine:
 
-```
-git clone https://github.com/your-username/status-200.git
+```git clone https://github.com/your-username/status-200.git
 ```
 
 ### 3. **Create a New Branch**
