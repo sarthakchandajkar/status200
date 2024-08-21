@@ -6,79 +6,114 @@ Thank you for your interest in contributing to **Status 200**! Your contribution
 
 To contribute, all you need to do is clone the repository, install Quartz, and start adding your files to the content folder. Here's a detailed guide:
 
-### 1. **Clone the Repository**
+### 1. **Fork the Repository**
 
-Start by cloning the **Status 200** repository to your local machine:
+Before cloning, you need to fork the **Status 200** repository to your own GitHub account.
 
-bash
+1. Go to the [Status 200 repository](https://github.com/sarthakchandajkar/status200).
+2. Click the **Fork** button at the top right of the repository page. This creates a copy of the repository in your GitHub account.
 
-Copy code
+### 2. **Clone Your Forked Repository**
 
-`git clone https://github.com/your-username/status-200.git`
+Now, clone your forked repository to your local machine:
 
-### 2. **Install Quartz Locally**
+```
+git clone https://github.com/your-username/status-200.git
+```
+
+### 3. **Create a New Branch**
+
+To avoid making changes directly to the `v4` branch, create a new branch for your contributions:
+
+```
+git checkout -b your-branch-name
+```
+
+Replace `your-branch-name` with a descriptive name related to your contribution.
+### 4. **Install Quartz Locally**
 
 Quartz is the tool we use to build and host this digital garden. Follow the steps below to install it:
 
 1. **Navigate to the repository:**
 
-bash
-
-Copy code
-
-`cd status-200`
+```
+cd status-200
+```
 
 2. **Install Quartz:**
 
-bash
+```
+npm i
+```
 
-Copy code
 
-`pip install quartz`
+For more detailed instructions on installing Quartz, visit the official [Quartz Documentation](https://quartz.jzhao.xyz).
 
-For more detailed instructions on installing Quartz, visit the official Quartz documentation.
+### 5. **Open the Cloned Folder as a Vault in Obsidian**
 
-### 3. **Add Your Content**
+To add content efficiently, open the cloned repository folder as a vault in Obsidian:
 
-Once Quartz is installed, you can start adding your notes, roadmaps, study materials, or personal experiences. Add your content inside the `content` folder of the repository.
+1. Open Obsidian.
+2. Select **Open Folder as Vault**.
+3. Navigate to the folder where you cloned the repository (`status-200`) and select it.
 
-bash
+Now, you can directly create, edit, and organize your notes in Obsidian.
 
-Copy code
+### 6. **Add Your Content**
 
-`cd content`
+Once Quartz is installed, you can start adding your notes, roadmaps, study materials, or personal experiences. Add your content inside the `content` folder of the repository. 
+
+```
+cd content
+```
 
 You can organize your content into subfolders for different topics, such as:
 
-markdown
-
-Copy code
-
-`- content/     - software-development/     - ai-ml/     - data-science/     - solutions-architecture/     - etc/`
+`- content/`   
+`- software-development/`     
+`- ai-ml/`     
+`- data-science/`  
+`- solutions-architecture/`
 
 Feel free to use Markdown for your notes, and make sure to link related topics using relative paths like:
 
-markdown
 
-Copy code
+```
+[Learn more about AI/ML](../ai-ml/intro.md)
+```
 
-`[Learn more about AI/ML](../ai-ml/intro.md)`
+### 7. **Create Backlinks to Connect Ideas**
 
-### 4. **Commit and Push Your Changes**
+To make **Status 200** more interconnected and easy to navigate, we strongly encourage you to create backlinks between related ideas and topics. This enhances the garden’s utility by allowing users to seamlessly explore connected concepts.
+
+In Obsidian, you can create backlinks by enclosing the name of another note in double square brackets:
+
+```
+[[Data Structures]]
+```
+
+Use these links generously to connect ideas, build a web of knowledge, and create a richer learning experience for everyone!
+### 8. **Commit and Push Your Changes**
 
 Once you’re happy with your additions, commit and push your changes:
 
-bash
+```
+git add . 
+git commit -m "Added new content on AI/ML" 
+git push origin your-branch-name
+```
 
-Copy code
+### 9. **Create a Pull Request**
 
-`git add . git commit -m "Added new content on AI/ML" git push origin main`
+After pushing your changes to your forked repository:
 
-### 5. **Create a Pull Request**
+1. Go to your fork on GitHub.
+2. Click **Compare & pull request**.
+3. Write a brief description of the changes you made and submit the pull request.
 
-After pushing your changes, create a pull request on GitHub. We’ll review it, and once approved, your content will be added to the garden!
+We’ll review it, and once approved, your content will be merged into the main repository!
 
-### 6. **Keep Exploring and Contributing**
+### 10. **Keep Exploring and Contributing**
 
 Remember, the garden is constantly evolving. Keep contributing as you learn and grow, and encourage others to do the same!
 

@@ -10,6 +10,7 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       GitHub: "https://github.com/sarthakchandajkar/status200"
     },
+    
   }),
 }
 
@@ -32,8 +33,9 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
-    Component.Explorer()
+    Component.MobileOnly(Component.Explorer()),
   ],
+  afterBody: []
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
@@ -47,4 +49,5 @@ export const defaultListPageLayout: PageLayout = {
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [],
+  afterBody: []
 }
