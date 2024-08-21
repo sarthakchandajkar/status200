@@ -21,7 +21,16 @@ Now, clone your forked repository to your local machine:
 git clone https://github.com/your-username/status-200.git
 ```
 
-### 3. **Install Quartz Locally**
+### 3. **Create a New Branch**
+
+To avoid making changes directly to the `v4` branch, create a new branch for your contributions:
+
+```
+git checkout -b your-branch-name
+```
+
+Replace `your-branch-name` with a descriptive name related to your contribution.
+### 4. **Install Quartz Locally**
 
 Quartz is the tool we use to build and host this digital garden. Follow the steps below to install it:
 
@@ -40,7 +49,7 @@ npm i
 
 For more detailed instructions on installing Quartz, visit the official [Quartz Documentation](https://quartz.jzhao.xyz).
 
-### 4. **Open the Cloned Folder as a Vault in Obsidian**
+### 5. **Open the Cloned Folder as a Vault in Obsidian**
 
 To add content efficiently, open the cloned repository folder as a vault in Obsidian:
 
@@ -50,7 +59,7 @@ To add content efficiently, open the cloned repository folder as a vault in Obsi
 
 Now, you can directly create, edit, and organize your notes in Obsidian.
 
-### 5. **Add Your Content**
+### 6. **Add Your Content**
 
 Once Quartz is installed, you can start adding your notes, roadmaps, study materials, or personal experiences. Add your content inside the `content` folder of the repository. 
 
@@ -60,33 +69,41 @@ cd content
 
 You can organize your content into subfolders for different topics, such as:
 
-`- content/     - software-development/     - ai-ml/     - data-science/     - solutions-architecture/     - etc/`
+`- content/`   
+`- software-development/`     
+`- ai-ml/`     
+`- data-science/`  
+`- solutions-architecture/`
 
 Feel free to use Markdown for your notes, and make sure to link related topics using relative paths like:
 
 
-`[Learn more about AI/ML](../ai-ml/intro.md)`
+```
+[Learn more about AI/ML](../ai-ml/intro.md)
+```
 
-### 6. **Create Backlinks to Connect Ideas**
+### 7. **Create Backlinks to Connect Ideas**
 
 To make **Status 200** more interconnected and easy to navigate, we strongly encourage you to create backlinks between related ideas and topics. This enhances the garden’s utility by allowing users to seamlessly explore connected concepts.
 
 In Obsidian, you can create backlinks by enclosing the name of another note in double square brackets:
 
-`[[Data Structures]]`
+```
+[[Data Structures]]
+```
 
 Use these links generously to connect ideas, build a web of knowledge, and create a richer learning experience for everyone!
-### 7. **Commit and Push Your Changes**
+### 8. **Commit and Push Your Changes**
 
 Once you’re happy with your additions, commit and push your changes:
 
 ```
 git add . 
 git commit -m "Added new content on AI/ML" 
-git push origin v4
+git push origin your-branch-name
 ```
 
-### 8. **Create a Pull Request**
+### 9. **Create a Pull Request**
 
 After pushing your changes to your forked repository:
 
@@ -96,7 +113,7 @@ After pushing your changes to your forked repository:
 
 We’ll review it, and once approved, your content will be merged into the main repository!
 
-### 9. **Keep Exploring and Contributing**
+### 10. **Keep Exploring and Contributing**
 
 Remember, the garden is constantly evolving. Keep contributing as you learn and grow, and encourage others to do the same!
 
