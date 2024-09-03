@@ -1,6 +1,9 @@
 ---
 title: <% tp.file.title %>
+aliases: 
 draft: false
-tags:
+tags: 
+author: []
 ---
  
+

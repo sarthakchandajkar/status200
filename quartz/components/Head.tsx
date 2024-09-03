@@ -9,6 +9,9 @@ export default (() => {
     const title = fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
     const description =
       fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description
+    const author: string = typeof fileData.frontmatter?.author === 'string'
+      ? fileData.frontmatter.author
+      : "Unknown Author"
     const { css, js } = externalResources
 
     const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
@@ -37,6 +40,7 @@ export default (() => {
         <meta property="og:height" content="675" />
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
+        <meta name="author" content={author} />
         <meta name="generator" content="Quartz" />
         {css.map((href) => (
           <link key={href} href={href} rel="stylesheet" type="text/css" spa-preserve />

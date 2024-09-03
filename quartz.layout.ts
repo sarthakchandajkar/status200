@@ -10,7 +10,6 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       GitHub: "https://github.com/sarthakchandajkar/status200"
     },
-    
   }),
 }
 
@@ -35,12 +34,30 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Backlinks(),
     Component.MobileOnly(Component.Explorer()),
   ],
-  afterBody: []
+  afterBody: [
+    Component.Comments({ 
+      provider: "giscus", 
+      options: {
+        repo: "sarthakchandajkar/status200",
+        repoId: "R_kgDOMkL7vQ",
+        category: "Announcements",
+        categoryId: "DIC_kwDOMkL7vc4CiJyJ",
+        mapping: "pathname",
+        strict: false,
+        reactionsEnabled: true,
+        inputPosition: "bottom",
+      } 
+    })
+  ]
 }
 
-// components for pages that display lists of pages  (e.g. tags or folders)
+// components for pages that display lists of pages (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [
+    Component.Breadcrumbs(), 
+    Component.ArticleTitle(), 
+    Component.ContentMeta()
+  ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
