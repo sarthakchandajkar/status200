@@ -2,7 +2,8 @@
 title: Multi Person Pose Estimation
 aliases: 
 draft: false
-tags: 
+tags:
+  - AI
 author:
   - Sarthak Chandajkar
 ---

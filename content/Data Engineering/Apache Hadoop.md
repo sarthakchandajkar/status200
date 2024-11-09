@@ -1,11 +1,13 @@
 ---
-title: Zombie Processes
+title: Apache Hadoop
 aliases: 
 draft: false
 tags:
   - Status200
+  - DataEngineering
+  - Data
 author:
   - Sarthak Chandajkar
 ---
-Child processes left behind by poorly written programs
+ 
 

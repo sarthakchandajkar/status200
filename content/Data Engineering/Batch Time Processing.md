@@ -1,11 +1,13 @@
 ---
-title: Zombie Processes
+title: Batch Time Processing
 aliases: 
 draft: false
 tags:
   - Status200
+  - DataEngineering
+  - Data
 author:
   - Sarthak Chandajkar
 ---
-Child processes left behind by poorly written programs
+ 
 

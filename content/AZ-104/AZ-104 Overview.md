@@ -1,9 +1,11 @@
 ---
-title: Untitled
-aliases: 
+title: AZ-104 Overview
+aliases:
+  - AZ-104 Overview
 draft: false
 tags:
   - AZ-104
+  - Status200
 author:
   - Sarthak Chandajkar
 ---

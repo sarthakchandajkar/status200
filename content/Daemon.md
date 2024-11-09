@@ -1,5 +1,5 @@
 ---
-title: Zombie Processes
+title: Daemon
 aliases: 
 draft: false
 tags:
@@ -7,5 +7,5 @@ tags:
 author:
   - Sarthak Chandajkar
 ---
-Child processes left behind by poorly written programs
+ 
 

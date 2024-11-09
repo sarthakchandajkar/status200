@@ -1,11 +1,13 @@
 ---
-title: Zombie Processes
+title: MapReduce
 aliases: 
 draft: false
 tags:
   - Status200
+  - Data
+  - DataEngineering
 author:
   - Sarthak Chandajkar
 ---
-Child processes left behind by poorly written programs
+ 
 
