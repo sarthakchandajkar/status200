@@ -3,11 +3,13 @@ title: What are CDNs?
 aliases:
   - CDN
 draft: false
-tags: 
+tags:
+  - AZ-104
+  - Cloud
+  - Microsoft
 author:
   - Sarthak Chandajkar
 ---
-
 A **Content Delivery Network (CDN)** is a network of servers distributed across various geographical locations that work together to deliver content to users more quickly and efficiently. The primary purpose of a CDN is to reduce latency (the time it takes for data to travel from the server to the user's device) and improve the performance of websites, especially for users who are far from the original server.
 
 ### **How CDNs Work**

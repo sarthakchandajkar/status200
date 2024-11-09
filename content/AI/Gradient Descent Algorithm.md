@@ -1,0 +1,7 @@
+Gradient descent is a method for unconstrained mathematical optimization. It is a first-order iterative algorithm for minimizing a differentiable multivariate function.
+
+The idea is to take repeated steps in the opposite direction of the gradient (or approximate gradient) of the function at the current point, because this is the direction of steepest descent. Conversely, stepping in the direction of the gradient will lead to a trajectory that maximizes that function; the procedure is then known as gradient ascent. It is particularly useful in machine learning for minimizing the cost or loss function.[1] Gradient descent should not be confused with local search algorithms, although both are iterative methods for optimization.
+
+Gradient descent is generally attributed to Augustin-Louis Cauchy, who first suggested it in 1847.[2] Jacques Hadamard independently proposed a similar method in 1907.[3][4] Its convergence properties for non-linear optimization problems were first studied by Haskell Curry in 1944,[5] with the method becoming increasingly well-studied and used in the following decades.[6][7]
+
+A simple extension of gradient descent, [[Stochastic Gradient Descent]], serves as the most basic algorithm used for training most deep networks today.

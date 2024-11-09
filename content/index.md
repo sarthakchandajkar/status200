@@ -1,5 +1,7 @@
 ---
 title: Welcome to Status 200
+tags:
+  - Status200
 ---
 # 🌱 **Welcome to Status 200: An Open-Source Tech Digital Garden**
 
