@@ -4,7 +4,6 @@ aliases:
   - Monitoring and Logging
 draft: false
 tags:
-  - Status200
   - Data
   - DataEngineering
   - DevOps

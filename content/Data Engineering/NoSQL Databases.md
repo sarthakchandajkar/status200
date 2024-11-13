@@ -4,7 +4,6 @@ aliases:
   - NoSQL Databases
 draft: false
 tags:
-  - Status200
   - Data
   - DataEngineering
 author:

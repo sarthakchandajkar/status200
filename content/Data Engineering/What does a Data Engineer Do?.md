@@ -6,7 +6,6 @@ tags:
   - Data
   - DataEngineering
   - ETL
-  - Status200
 author:
   - Sarthak Chandajkar
 ---

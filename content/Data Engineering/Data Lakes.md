@@ -4,7 +4,6 @@ aliases:
   - Data Lakes
 draft: false
 tags:
-  - Status200
   - Data
   - DataGovernance
   - DataEngineering

@@ -1,9 +1,9 @@
 ---
 title: Dimensional Modeling
-aliases: 
+aliases:
+  - Dimensional Modeling
 draft: false
 tags:
-  - Status200
   - Data
   - DataEngineering
 author:

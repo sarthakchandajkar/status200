@@ -1,9 +1,9 @@
 ---
 title: AirFlow
-aliases: 
+aliases:
+  - AirFlow
 draft: false
 tags:
-  - Status200
   - Data
   - DataEngineering
 author:

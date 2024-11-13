@@ -1,9 +1,9 @@
 ---
-title: Untitled
-aliases: 
+title: Data Warehouse
+aliases:
+  - Data Warehouse
 draft: false
 tags:
-  - Status200
   - DataEngineering
   - Data
   - ETL

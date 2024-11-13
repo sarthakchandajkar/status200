@@ -1,9 +1,9 @@
 ---
 title: Apache Kafka
-aliases: 
+aliases:
+  - Apache Kafka
 draft: false
 tags:
-  - Status200
   - DataEngineering
   - Data
 author:

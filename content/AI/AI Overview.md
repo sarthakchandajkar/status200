@@ -4,7 +4,6 @@ aliases:
 draft: false
 tags:
   - ArtificialIntelligence
-  - AI
   - Status200
 author:
 ---

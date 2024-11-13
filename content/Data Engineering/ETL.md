@@ -1,6 +1,7 @@
 ---
 title: ETL
-aliases: 
+aliases:
+  - ETL
 draft: false
 tags:
   - Data
@@ -9,7 +10,6 @@ tags:
   - SQL
   - Airflow
   - DataFactory
-  - Status200
   - "#Java"
   - "#Scala"
 author:

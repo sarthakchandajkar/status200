@@ -1,14 +1,11 @@
 ---
-title: BI
+title: Azure Data Lake
 aliases:
-  - BI
+  - Azure Data Lake
 draft: false
 tags:
-  - Data
-  - PowerBI
   - DataEngineering
-  - "#BusinessIntellignece"
-  - "#Visualization"
+  - Data
 author:
   - Sarthak Chandajkar
 ---

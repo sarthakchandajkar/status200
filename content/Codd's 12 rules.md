@@ -4,7 +4,6 @@ aliases:
   - Codd's 12 rules
 draft: false
 tags:
-  - Status200
   - Data
   - DataEngineering
 author:

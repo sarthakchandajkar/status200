@@ -3,7 +3,6 @@ title: Relational Databases
 aliases: 
 draft: false
 tags:
-  - Status200
   - Data
   - DataGovernance
   - DataEngineering

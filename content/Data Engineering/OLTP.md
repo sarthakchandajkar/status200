@@ -4,7 +4,6 @@ aliases:
   - OLTP
 draft: false
 tags:
-  - Status200
   - Data
   - DataEngineering
 author:

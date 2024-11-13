@@ -11,7 +11,6 @@ author:
   - Sarthak Chandajkar
 ---
  
-
 # AZ-104: Implement and manage storage in Azure
 
 ## Azure Storage
@@ -112,11 +111,188 @@ author:
 
 # Replication Strategies
 
-- Locally redundant storage (LRS)
-- Zone redundant storage (ZRS)
-- Geo-redundant storage (GRS)
-- Geo-zone-redundant storage (GZRS)
+###  Locally redundant storage (LRS)
+- lowest cost
+- least durable
+- Replicas unrecoverable if datacenter level disaster occurs.
+- Use Case:
+	- data that can be reconstructed easily
+	- live feed data that changes continuously, hence storing it is not essential.
+	- Organization Data Governance requirements. 
+
+### Zone redundant storage
+- Data replicated over *three* storage clusters in one region.
+- Each cluster separated physically; separate [[Availability Zone|availability zone]].
+- Each zone is autonomous.
+- can access and manage your data if a zone becomes unavailable.
+- Low latency and excellent performance.
+- Not available in all regions.
 
 
+> [!NOTE] Changing to ZRS from another strategy
+>  Changing to ZRS from another data replication option requires the physical data movement from a single storage stamp to multiple stamps within a region.
+
+### Geo-redundant storage
+- replication to a secondary region.(>100miles than current location).
+- high durability even during regional outage.
+- available to be read only if Microsoft initiates a failover from the primary to secondary region.
+- 99.99999999999999% **(16 9's) durability**
+- Two types of GRS:
+	- **GRS** replicates your data to another data center in a secondary region. The data is available to be read only if Microsoft initiates a failover from the primary to secondary region.
+	- **Read-access geo-redundant storage** (RA-GRS) is based on GRS. RA-GRS replicates your data to another data center in a secondary region, and also provides you with the option to read from the secondary region. With RA-GRS, you can read from the secondary region regardless of whether Microsoft initiates a failover from the primary to the secondary.
+-  is first replicated with locally redundant storage
+- committed to the primary location and replicated by using LRS
+- update is then replicated asynchronously to the secondary region by using GRS. secondary region uses LRS.
+- primary and secondary regions manage replicas across separate [[Fault Domains]] and upgrade domains within a [[Storage Scale Unit]].
+
+### Geo-zone redundant storage
+- High availability of zone-redundant storage with protection from regional outages by geo-redundant storage.
+- Replication: 3 [[Availability Zone|AZ]] in primary region and secondary geographic region.
+- Read and write data if an availability zone becomes unavailable or is unrecoverable.
+- Durable during a complete regional outage or during a disaster in which the primary region isn't recoverable.
+- 99.99999999999999% (16 9's) durability.
+- Scalable.
+- **RA-GZRS**: enable read access to data in the secondary region with read-access geo-zone-redundant storage (RA-GZRS).
+
+| Node in data center unavailable                                                              | Entire data center unavailable                                                | Region-wide outage                                             | Read access during region-wide outage |
+| -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------- |
+| - **LRS**  <br>- **ZRS**  <br>- **GRS**  <br>- **RA-GRS**  <br>- **GZRS**  <br>- **RA-GZRS** | - **ZRS**  <br>- **GRS**  <br>- **RA-GRS**  <br>- **GZRS**  <br>- **RA-GZRS** | - **GRS**  <br>- **RA-GRS**  <br>- **GZRS**  <br>- **RA-GZRS** | - **RA-GRS**  <br>- **RA-GZRS**       |
+
+--- 
+# Accessing Storage
+
+- Endpoint: subdomain + domain.
+- Example: To access the _myblob_ data in the _mycontainer_ location in your storage account, we use the following URL address:
+
+`//`**`mystorageaccount`**`.blob.core.windows.net/`**`mycontainer`**`/`**`myblob`**.
+
+### Custom domains
+- to access blob data
+- Two ways to configure Custom Domains:
+	- **Direct mapping**:
+		- enable a custom domain for a subdomain to an Azure storage account
+		- create a `CNAME` record that points from the subdomain to the Azure storage account.
+	- **Intermediary domain mapping**
+		- when domain already in use within Azure.
+		- may cause minor downtime while domain is being verified.
+		- Solution: using `asverify` intermediary domain to validate the domain.
+			- permit Azure to recognize your custom domain without modifying the DNS record for the domain. After you modify the DNS record for the domain, your domain is mapped to the blob endpoint with no downtime.
+- The following example shows how a domain in use is mapped to an Azure storage account in the DNS with the `asverify` intermediary domain:
+	- `CNAME` record: **`asverify`**`.blobs.contoso.com`
+	- Intermediate `CNAME` record: **`asverify`**`.contosoblobs.blob.core.windows.net`
+
+> [!NOTE] Azure Storage
+> Azure Storage doesn't currently provide native support for HTTPS with custom domains. You can implement an Azure Content Delivery Network (CDN) to access blobs by using custom domains over HTTPS.
+
+## Secure Storage Endpoints
+- Firewalls and Virtual Networks
+- Access one or more public IP ranges
+- Subnets and virtual networks must exist in the same Azure region or region pair as your storage account.
+---
+# Azure Blob Storage
+- storing large amounts of unstructured object data
+- Object/Container Storage
+- store any type of text or binary
+
+![[Pasted image 20241112164634.png]]
+
+
+### Considerations before using Blob Storage
+
+- Browser uploads
+- Distributed access
+- Streaming data
+- Archiving and recovery
+- Application access
+
+- Blob must be stored in a container resource.
+- Container stores unlimited blobs
+- Storage account can have unlimited containers
+- Configure [[PAL|Public Access Levels]].
+- Command to create blob container: `New-AzStorageContainer`
+
+---
+# Blob Access Tiers
+
+![[Pasted image 20241113100429.png]]
+
+|Comparison|Hot access tier|Cool access tier|Cold access tier|Archive access tier|
+|---|---|---|---|---|
+|**Availability**|99.9%|99%|99%|99%|
+|**Availability (RA-GRS reads)**|99.99%|99.9%|99.9%|99.9%|
+|**Latency (time to first byte)**|milliseconds|milliseconds|milliseconds|hours|
+|**Minimum storage duration**|N/A|30 days|90 days|180 days|
+
+
+## Blob lifecycle management rules
+- rich rule-based policy for GPv2 and Blob Storage accounts.
+- lifecycle policy rules to transition your data to the appropriate access tiers.
+- set expiration times for the end of a data set's lifecycle.
+
+### Lifecycle Management
+- Transition blobs to a cooler storage tier (Hot to Cool, Hot to Archive, Cool to Archive) to optimize for performance and cost.
+- Delete blobs at the end of their lifecycles.
+- Define rule-based conditions to run once per day at the Azure storage account level.
+- Apply rule-based conditions to containers or a subset of blobs.
+- **Use the if-then block**:
+	- *if* Base blobs were created/modified more than *14* (days ago) *then*:
+		1. Move to cool storage.
+		2. Move to archive storage.
+		3. Delete the blob
+
+--- 
+# Blob Object Replication
+- copies blobs in a container asynchronously as per configured rule.
+- Contents that are copied include: 
+	- blob contents
+	- blob metadata & properties
+	- data associated with blob
+
+![[Pasted image 20241113164219.png]]
+
+- Blob versioning enabled in source and destination accounts.
+- Does no support [[Blob Snapshots]].
+- Works in Hot, Cold and Cool tiers.
+- Replication policy has to be created to specify source & destination storage accounts.
+- Policy should have one or more rules.
+
+### Considerations
+- Latency reductions.
+- Efficiency of compute workloads.
+- Data distribution.
+- Cost benefits.
+
+## Types of blobs
+- **Block blobs(Default)**
+	- blocks of data.
+	- storing text and binary data in the cloud.
+	- Example: files, images and videos.
+- **Append blobs**
+	- similar to block blobs.
+	- optimized for _append_ operations.
+	- Example: logging scenarios, data increases with logging.
+- **Page blobs**
+	- up to *8TB* in size.
+	- read/write operations.
+	- Example: Virtual Machines uses page blobs for operating system disks and data disks.
+
+
+> [!NOTE] Blob Types
+>  After you create a blob, you can't change its type.
+
+
+## Upload tools
+- Azure Storage Explorer
+- AzCopy
+- [[Azure Data Box Disk]]
+- Azure Import/Export
+
+## Blob Storage Pricing
+- Performance tiers
+- Data access costs
+- Transaction costs
+- Geo-replication data transfer costs
+- Outbound data transfer costs
+- Changes to the storage tier
 
 

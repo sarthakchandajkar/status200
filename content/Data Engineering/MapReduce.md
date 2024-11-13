@@ -1,9 +1,9 @@
 ---
 title: MapReduce
-aliases: 
+aliases:
+  - MapReduce
 draft: false
 tags:
-  - Status200
   - Data
   - DataEngineering
 author:
