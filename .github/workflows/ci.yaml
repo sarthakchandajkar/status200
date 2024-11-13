@@ -3,15 +3,15 @@ name: Build and Test
 on:
   pull_request:
     branches:
-      - v4
+      - master
   push:
     branches:
-      - v4
+      - master
   workflow_dispatch:
 
 jobs:
   build-and-test:
-    if: ${{ github.repository == 'jackyzha0/quartz' }}
+    if: ${{ github.repository == 'sarthakchandajkar/status200' }}
     strategy:
       matrix:
         os: [windows-latest, macos-latest, ubuntu-latest]
@@ -48,7 +48,7 @@ jobs:
         run: npx quartz build --bundleInfo
 
   publish-tag:
-    if: ${{ github.repository == 'jackyzha0/quartz' && github.ref == 'refs/heads/v4' }}
+    if: ${{ github.repository == 'sarthakchandajkar/status200' && github.ref == 'refs/heads/master' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
