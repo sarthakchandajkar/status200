@@ -1,9 +1,9 @@
 ---
 title: Apache Flink
-aliases: 
+aliases:
+  - Apache Flink
 draft: false
 tags:
-  - Status200
   - Data
   - DataEngineering
 author:

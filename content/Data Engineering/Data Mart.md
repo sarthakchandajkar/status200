@@ -1,14 +1,11 @@
 ---
-title: BI
+title: Data Mart
 aliases:
-  - BI
+  - Data Mart
 draft: false
 tags:
   - Data
-  - PowerBI
   - DataEngineering
-  - "#BusinessIntellignece"
-  - "#Visualization"
 author:
   - Sarthak Chandajkar
 ---

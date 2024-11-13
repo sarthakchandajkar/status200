@@ -1,8 +1,8 @@
 ---
-title: Virtual Machines
+title: Fault Domains
 aliases:
-  - Virtual Machines
-draft: false
+  - Fault Domains
+draft: true
 tags:
   - AZ-104
   - Cloud

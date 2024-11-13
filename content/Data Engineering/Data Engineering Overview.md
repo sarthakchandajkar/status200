@@ -3,7 +3,6 @@ title: Data Engineering Overview
 aliases: 
 draft: false
 tags:
-  - Status200
   - DataEngineering
 author:
   - Sarthak Chandajkar

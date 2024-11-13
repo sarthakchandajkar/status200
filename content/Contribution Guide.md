@@ -1,3 +1,9 @@
+---
+tags:
+  - Status200
+---
+
+
 # 🌱 **Status 200 Contribution Guide**
 
 Thank you for your interest in contributing to **Status 200**! Your contributions will help this digital garden grow and become an even more valuable resource for tech enthusiasts worldwide. Follow the steps below to get started.

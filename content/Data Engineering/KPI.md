@@ -4,7 +4,6 @@ aliases:
   - KPI
 draft: false
 tags:
-  - Status200
   - Data
   - DataFactory
   - DataEngineering

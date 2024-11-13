@@ -5,7 +5,6 @@ aliases:
 draft: false
 tags:
   - DataEngineering
-  - Status200
 author:
   - Sarthak Chandajkar
 ---

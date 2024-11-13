@@ -1,9 +1,9 @@
 ---
-title: Untitled
-aliases: 
+title: Apache Spark
+aliases:
+  - Apache Spark
 draft: false
 tags:
-  - Status200
   - DataEngineering
   - Data
 author:

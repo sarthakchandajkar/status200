@@ -10,6 +10,7 @@ tags:
 author:
   - Sarthak Chandajkar
 ---
+
 # Microsoft Active Directory Domain Services (AD DS)
 
 - directory service that provides the methods for storing directory data, such as user accounts and passwords.
@@ -449,7 +450,6 @@ New-MgUser -DisplayName "Abby Brown" -PasswordProfile $PasswordProfile -MailNick
 ```
 
 ```Azure CLI
-
 az ad user create --display-name "Abby Brown" --password "<password>" --user-principal-name "AbbyB@contoso.com" --force-change-password-next-login true --mail-nickname "AbbyB"
 ```
 
@@ -476,11 +476,15 @@ az ad user create --display-name "Abby Brown" --password "<password>" --user-pri
 3. **Dynamic device**. You can create rules based on characteristics to enable attribute-based dynamic memberships for groups. For example, if a user’s device is associated with the Service department, that device will be dynamically assigned to the Service group.
 
 
-#### Script Group Creating: Using the `New-MgGroup` comman
+#### Script Group Creating: Using the `New-MgGroup` command
 
 ```Powershell
-
-New-MgGroup -Description "Marketing" -DisplayName "Marketing" -MailNickName "Marketing" -SecurityEnabled -MailEnabled:$False
+New-MgGroup
+-Description "Marketing" 
+-DisplayName "Marketing" 
+-MailNickName "Marketing"
+-SecurityEnabled 
+-MailEnabled:$False
 ```
 
 ## Use roles to control resource access
