@@ -194,7 +194,7 @@ author:
 - Object/Container Storage
 - store any type of text or binary
 
-![[Pasted image 20241112164634.png]]
+![Azure Blob Storage](content/assets/Azure%20Blob%20Storage.png)
 
 
 ### Considerations before using Blob Storage
@@ -214,7 +214,7 @@ author:
 ---
 # Blob Access Tiers
 
-![[Pasted image 20241113100429.png]]
+![Access tiers](content/assets/Access%20tiers.png)
 
 |Comparison|Hot access tier|Cool access tier|Cold access tier|Archive access tier|
 |---|---|---|---|---|
@@ -248,7 +248,7 @@ author:
 	- blob metadata & properties
 	- data associated with blob
 
-![[Pasted image 20241113164219.png]]
+![Blob Object Replication](content/assets/Blob%20Object%20Replication.png)
 
 - Blob versioning enabled in source and destination accounts.
 - Does no support [[Blob Snapshots]].
