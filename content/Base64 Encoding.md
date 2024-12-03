@@ -1,9 +1,11 @@
 ---
-title: Untitled
-aliases: 
+title: Base64 Encoding
+aliases:
+  - Base64 Encoding
 draft: false
-tags: []
+tags: 
 author:
+  - Sarthak Chandajkar
 ---
  
 

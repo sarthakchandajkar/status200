@@ -1,6 +1,7 @@
 ---
 title: NTLM
-aliases: 
+aliases:
+  - NTLM
 draft: false
 tags:
   - AZ-104

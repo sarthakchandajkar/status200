@@ -1,8 +1,10 @@
 ---
-title: Untitled
-aliases: 
+title: SHA 256 algorithm
+aliases:
+  - SHA 256 algorithm
 draft: false
-tags: []
+tags: 
 author:
+  - Sarthak Chandajkar
 ---
 

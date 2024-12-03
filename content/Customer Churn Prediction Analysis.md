@@ -1,9 +1,12 @@
 ---
-title: Untitled
-aliases: 
+title: Customer Churn Prediction Analysis
+aliases:
+  - Customer Churn Prediction Analysis
 draft: false
-tags: []
+tags:
+  - DataEngineering
 author:
+  - Sarthak Chandajkar
 ---
  
 

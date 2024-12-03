@@ -8,7 +8,7 @@ tags:
 author:
   - Sarthak Chandajkar
 ---
- ![[Pasted image 20241203111145.png]]
+ ![[Virtual Network Peering.png]]
  
 # What is Virtual Network Peering?
 
