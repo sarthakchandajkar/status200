@@ -1,18 +1,14 @@
 ---
-title: Module 6
+title: Azure Storage Encryption
 aliases:
-  - Module 6
+  - Azure Storage Encryption
 draft: false
 tags:
   - AZ-104
   - Cloud
+  - Microsoft
 author:
   - Sarthak Chandajkar
 ---
-
-
-# Network Watcher Service
-
-## Connection Troubleshoot
-## 
+ 
 

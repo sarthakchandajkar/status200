@@ -1,7 +1,7 @@
 ---
-title: Module 6
+title: Reparse Points
 aliases:
-  - Module 6
+  - Reparse Points
 draft: false
 tags:
   - AZ-104
@@ -9,10 +9,5 @@ tags:
 author:
   - Sarthak Chandajkar
 ---
-
-
-# Network Watcher Service
-
-## Connection Troubleshoot
-## 
+ 
 

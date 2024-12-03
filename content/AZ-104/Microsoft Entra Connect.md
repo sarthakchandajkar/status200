@@ -1,5 +1,5 @@
 ---
-title: UntitledMicrosoft Entra Connect
+title: Microsoft Entra Connect
 aliases: 
 draft: false
 tags: 

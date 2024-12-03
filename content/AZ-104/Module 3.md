@@ -10,7 +10,7 @@ tags:
 author:
   - Sarthak Chandajkar
 ---
- 
+
 # AZ-104: Implement and manage storage in Azure
 
 ## Azure Storage
@@ -194,7 +194,7 @@ author:
 - Object/Container Storage
 - store any type of text or binary
 
-![Azure Blob Storage](content/assets/Azure%20Blob%20Storage.png)
+![[Azure Blob Storage.png]]
 
 
 ### Considerations before using Blob Storage
@@ -214,7 +214,7 @@ author:
 ---
 # Blob Access Tiers
 
-![Access tiers](content/assets/Access%20tiers.png)
+![[Access tiers.png]]
 
 |Comparison|Hot access tier|Cool access tier|Cold access tier|Archive access tier|
 |---|---|---|---|---|
@@ -248,7 +248,7 @@ author:
 	- blob metadata & properties
 	- data associated with blob
 
-![Blob Object Replication](content/assets/Blob%20Object%20Replication.png)
+![[Blob Object Replication.png]]
 
 - Blob versioning enabled in source and destination accounts.
 - Does no support [[Blob Snapshots]].
@@ -294,5 +294,80 @@ author:
 - Geo-replication data transfer costs
 - Outbound data transfer costs
 - Changes to the storage tier
+
+--- 
+# Azure Storage Security
+
+## Security Strategies
+- Encryption: [[Azure Storage Encryption]]
+- Authentication:
+	- Microsoft Entra ID 
+	- [[Azure RBAC]]
+- Data in transit
+	- Client side encryption
+	- HTTPS
+	- [[SMB 3.0]]
+- Disk Encryption:
+	- Azure Disk Encryption
+- [[Shared Access Signatures]]
+- Authorization
+
+|Authorization strategy|Description|
+|---|---|
+|**Microsoft Entra ID**|Microsoft Entra ID is Microsoft's cloud-based identity and access management service. With Microsoft Entra ID, you can assign fine-grained access to users, groups, or applications by using role-based access control.|
+|**Shared Key**|Shared Key authorization relies on your Azure storage account access keys and other parameters to produce an encrypted signature string. The string is passed on the request in the Authorization header.|
+|**Shared access signatures**|A SAS delegates access to a particular resource in your Azure storage account with specified permissions and for a specified time interval.|
+|**Anonymous access to containers and blobs**|You can optionally make blob resources public at the container or blob level. A public container or blob is accessible to any user for anonymous read access. Read requests to public containers and blobs don't require authorization.|
+[Source](https://learn.microsoft.com/en-us/training/modules/configure-storage-security/2-review-strategies)
+
+--- 
+# [[Shared Access Signatures]]
+
+--- 
+
+$$
+ URI = Azure Storage Resource + SAS token
+$$
+
+| Parameter           | Example                                                                                            | Description                                                                                                                                                                                                                                                                                                               |     |
+| ------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| **Resource URI**    | `https://myaccount.`**`blob`**`.core.windows.net/` `?restype=`**`service`** `&amp;comp=properties` | Defines the Azure Storage endpoint and other parameters. This example defines an endpoint for Blob Storage and indicates that the SAS applies to service-level operations. When the URI is used with `GET`, the Storage properties are retrieved. When the URI is used with `SET`, the Storage properties are configured. |     |
+| **Storage version** | **`sv`**`=2015-04-05`                                                                              | For Azure Storage version 2012-02-12 and later, this parameter indicates the version to use. This example indicates that version 2015-04-05 (April 5, 2015) should be used.                                                                                                                                               |     |
+| **Storage service** | **`ss`**`=bf`                                                                                      | Specifies the Azure Storage to which the SAS applies. This example indicates that the SAS applies to Blob Storage and Azure Files.                                                                                                                                                                                        |     |
+| **Start time**      | `st=2015-04-29T22%3A18%3A26Z`                                                                      | (Optional) Specifies the start time for the SAS in UTC time. This example sets the start time as April 29, 2015 22:18:26 UTC. If you want the SAS to be valid immediately, omit the start time.                                                                                                                           |     |
+| **Expiry time**     | `se=2015-04-30T02%3A23%3A26Z`                                                                      | Specifies the expiration time for the SAS in UTC time. This example sets the expiry time as April 30, 2015 02:23:26 UTC.                                                                                                                                                                                                  |     |
+| **Resource**        | **`sr`**`=b`                                                                                       | Specifies which resources are accessible via the SAS. This example specifies that the accessible resource is in Blob Storage.                                                                                                                                                                                             |     |
+| **Permissions**     | **`sp`**`=rw`                                                                                      | Lists the permissions to grant. This example grants access to read and write operations.                                                                                                                                                                                                                                  |     |
+| **IP range**        | `sip=168.1.5.60-168.1.5.70`                                                                        | Specifies a range of IP addresses from which a request is accepted. This example defines the IP address range 168.1.5.60 through 168.1.5.70.                                                                                                                                                                              |     |
+| **Protocol**        | **`spr`**`=https`                                                                                  | Specifies the protocols from which Azure Storage accepts the SAS. This example indicates that only requests by using HTTPS are accepted.                                                                                                                                                                                  |     |
+| **Signature**       | `sig=F%6GRVAZ5Cdj2Pw4tgU7Il` `STkWgn7bUkkAg8P6HESXwmf%4B`                                          | Specifies that access to the resource is authenticated by using an HMAC signature. The signature is computed over a string-to-sign with a key by using the SHA256 algorithm, and encoded by using Base64 encoding.                                                                                                        |     |
+
+
+## Azure Storage Encryption
+
+- Protects data at rest.
+- Encrypted automatically, decrypted automatically before retrieval.
+- Transparent to users.
+- Encrypted through 256-bit advanced encryption standard (AES) encryption.
+- Available for new and existing accounts.
+
+## Customer Managed Keys
+
+- Custom made keys are flexible and reliable.
+- Create, disable, audit, rotate and define access for keys.
+- Account and key vault must be in the same region but can be in different subscriptions.
+- **Configuration**:
+	- Encryption type
+	- Encryption key
+
+## [Azure Storage Security Best Practices](https://learn.microsoft.com/en-us/training/modules/configure-storage-security/7-apply-best-practices)
+---
+
+# Azure Files
+
+- shared storage for applications by using the industry standard [[Server Message Block]] and [[NFS]]
+- stores data as true directory objects in file shares.
+- 
+
 
 

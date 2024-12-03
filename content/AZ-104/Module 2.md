@@ -53,7 +53,7 @@ author:
 - Does have a device class
 - Does not include the [[Organizational Unit (OU)]] class
 
-## Microsoft Entra ID vs Microsoft Active Directory Doman Services
+## Microsoft Entra ID vs Microsoft Active Directory Domain Services
 
 | <font color="#92cddc">**Feature**</font> | <font color="#92cddc">**Active Directory Domain Services (AD DS)**</font>                                          | <font color="#92cddc">**Microsoft Entra ID**</font>                                                           |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
