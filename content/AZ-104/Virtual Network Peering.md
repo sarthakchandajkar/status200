@@ -8,9 +8,10 @@ tags:
 author:
   - Sarthak Chandajkar
 ---
- ![[Virtual Network Peering.png]]
  
 # What is Virtual Network Peering?
+
+![[Virtual Network Peering.png]]
 
 - **Virtual Network Peering** allows you to connect to different virtual networks in the same or different regions.
 - There are two types of VNet Peerings:

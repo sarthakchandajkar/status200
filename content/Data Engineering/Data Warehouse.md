@@ -11,7 +11,7 @@ author:
   - Sarthak Chandajkar
 ---
 
-![[Pasted image 20241109001835.png]]
+![[Data Warehouse.png]]
 
 
 - structured, historical and aggregated data

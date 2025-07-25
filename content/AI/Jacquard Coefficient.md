@@ -34,3 +34,5 @@ The Jaccard Coefficient is closely related to the **Dice Score** (another popula
 Dice Score=2×∣A∩B∣∣A∣+∣B∣\text{Dice Score} = \frac{2 \times |A \cap B|}{|A| + |B|}Dice Score=∣A∣+∣B∣2×∣A∩B∣​
 
 Both metrics are used to measure the similarity between the predicted and ground truth segmentation masks, but the Jaccard Coefficient tends to be slightly more strict in terms of the penalty for errors.
+
+

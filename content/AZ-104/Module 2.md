@@ -33,7 +33,7 @@ author:
 	- Configuring Application Proxy for cloud and local applications
 	- Configuring Conditional Access for users and devices
 
-![[Pasted image 20241031144415.png]]
+![[MAAD.png]]
 
 ## Microsoft Entra Tenants
 

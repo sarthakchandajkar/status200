@@ -24,6 +24,7 @@ author:
 - NAT Rules
 - Azure Application Gateway
 - DNS
+- Session Persistence
 
 # Azure Virtual Networks
 
@@ -33,6 +34,12 @@ author:
 - can be linked to on-prem infrastructure to create hybrid/cross premises solutions.
 - Can be divided into [[Subnets]].
 
-# User Defined Routes
+## User Defined Routes
 
-# Azure Load Balancer
+## Azure Load Balancer
+
+## Azure Application Gateway
+
+## Domain Name Systems
+
+## Azure Public DNS
