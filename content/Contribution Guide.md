@@ -91,8 +91,8 @@ To maintain consistency across all contributions, we use a pre-defined template 
     - Click on **Community Plugins** and search for “Templater”.
     - Install and enable the Templater plugin
 
-	>**Note:** If this is your first time using Obsidian, you might need to enable community plugins as prompted. After enabling them, it’s recommended to close and reopen Obsidian.
-	
+> [!NOTE]
+ 	Note: If this is your first time using Obsidian, you might need to enable community plugins as prompted. After enabling them, it’s recommended to close and reopen Obsidian.
 	
 2. **Use the Template**:
     
