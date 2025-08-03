@@ -13,4 +13,3 @@ author:
 # What is CIDR?
 
 - Classless Inter-Domain Routing
-- 
