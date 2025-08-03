@@ -1,3 +1,14 @@
+---
+title: Gradient Vector
+aliases: 
+draft: false
+tags:
+  - AI
+  - Status200
+author:
+  - Sarthak Chandajkar
+---
+
 The **gradient vector** of multivariable function points in the direction of the steepest increase of its slope. Basically, it's the <span style="background:#9254de">generalization of the derivative of a function</span>, to the domain of multivariable functions. As such, it's a foundational term in calculus with many uses - especially for measuring the rate of change of a function, as well so ascending / descending its graph towards its (local) minima / Maxima.
 
 In the case of Machine Learning, the most common use of it, is in the [[Gradient Descent Algorithm]]. More specifically, we use it to decide on how should we change the model parameters, such that we will descent down the cost/loss/objective function - towards its minima. 

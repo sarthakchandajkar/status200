@@ -1,5 +1,4 @@
 
-# Learning Python: Recommended Resources
 
 If you're entirely new to programming, we recommend you complete a beginner-level course in Python before taking this course. While the lectures will focus on the mathematics, **there are labs and assignments throughout the course that will require you are familiar with the following programming concepts:**
 

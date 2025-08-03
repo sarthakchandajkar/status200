@@ -8,7 +8,7 @@ tags:
 author:
   - Sarthak Chandajkar
 ---
- OLAP (Online Analytical Processing) and OLTP (Online Transaction Processing) are two distinct database systems, each serving specific purposes within an organization's data management and analysis strategy. Here's a detailed comparison:
+OLAP (Online Analytical Processing) and OLTP (Online Transaction Processing) are two distinct database systems, each serving specific purposes within an organization's data management and analysis strategy. Here's a detailed comparison:
 
 | <font color="#4bacc6">Feature</font> | <font color="#4bacc6">OLAP</font>                                                              | <font color="#4bacc6">OLTP</font>                                        |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
