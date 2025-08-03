@@ -7,7 +7,7 @@ tags:
 author:
   - Sarthak Chandajkar
 ---
- 
+a6be 
 - Brute Force (e.g. Linear Search)  
 - Divide & Conquer (e.g. Binary Search, Merge Sort and QuickSort)  
 - Greedy (e.g. Dijkstra)

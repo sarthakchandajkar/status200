@@ -9,7 +9,7 @@ author:
 ---
 1. [[ADAM Optimizer]]
 2. [[BERT]]
-3. [[Faster R-CNN]]
+3. [[status200/AI/Faster R-CNN]]
 4. [[Gradient Vector]]
 5. [[Gradient Descent Algorithm]]
 6. [[Jacquard Coefficient]]

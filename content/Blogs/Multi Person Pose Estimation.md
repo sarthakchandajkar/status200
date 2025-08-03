@@ -4,6 +4,8 @@ aliases:
 draft: false
 tags:
   - AI
+  - Status200
+  - Blogs
 author:
   - Sarthak Chandajkar
 ---

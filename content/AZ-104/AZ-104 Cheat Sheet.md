@@ -46,13 +46,8 @@ author:
 - Az copy
 ---
 # Important Ports
+
 - Azure Bastion: 443
 - Azure File share: 445
 
 --- 
-# Revision
-
-- Section Quizzes
-- Practice Test 1 and 2
-- Review topics of incorrect questions
-- Breeze though slides
