@@ -1,5 +1,5 @@
 ---
-title: Neural Networks
+title: Stochastic Gradient Descent
 aliases: 
 draft: false
 tags:

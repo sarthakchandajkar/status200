@@ -1,5 +1,5 @@
 ---
-title: Neural Networks
+title: Objective Function
 aliases: 
 draft: false
 tags:
